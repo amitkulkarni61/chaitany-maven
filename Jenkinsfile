@@ -21,7 +21,7 @@ stage('compile my project')
 {
 steps
 {
-withMaven(jdk: 'localJDK', maven: 'localMaven') {
+withMaven(jdk: 'JAVA_HOME', maven: 'MAVEN_HOME') {
     sh 'mvn compile'
 	//println 'added println'
 }}}
@@ -30,7 +30,7 @@ stage('test my project')
 {
 steps
 {
-withMaven(jdk: 'localJDK', maven: 'localMaven') {
+withMaven(jdk: 'JAVA_HOME', maven: 'MAVEN_HOME') {
     sh 'mvn test'
 }}}
     
@@ -38,7 +38,7 @@ stage('package my project')
 {
 steps
 {
-withMaven(jdk: 'localJDK', maven: 'localMaven') {
+withMaven(jdk: 'JAVA_HOME', maven: 'MAVEN_HOME') {
     sh 'mvn package'
 }}}
     
@@ -49,7 +49,7 @@ stage('package my install')
 {
 steps
 {
-withMaven(jdk: 'localJDK', maven: 'localMaven') {
+withMaven(jdk: 'JAVA_HOME', maven: 'MAVEN_HOME') {
     sh 'mvn install'
 }}}
 	
